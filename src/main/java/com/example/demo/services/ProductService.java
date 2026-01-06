@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.entities.Product;
+import com.example.demo.entities.Company;
 import com.example.demo.repositories.ProductRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -15,8 +15,8 @@ import java.util.List;
 public class ProductService {
     ProductRepository productRepository;
 
-    public List<Product> getAllProducts() {
-        List<Product> products = productRepository.findAll();
+    public List<Company> getAllProducts() {
+        List<Company> products = productRepository.findAll();
         System.out.println(products);
 
         return products;

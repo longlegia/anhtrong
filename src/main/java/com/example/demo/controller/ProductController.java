@@ -5,17 +5,18 @@ import com.example.demo.services.ProductService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RequiredArgsConstructor
 @RestController
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RequestMapping("/company")
 public class ProductController {
+
+    @Autowired
     ProductService ProductService;
 
     @GetMapping
